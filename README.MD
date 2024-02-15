@@ -1,6 +1,6 @@
 # **VRNETZER-APP**
 
-A CytoscapeApp –[DataDiVRApp](https://github.com/menchelab/DataDiVRApp/blob/main/target/VRNetzerApp-1.0.1.jar) – which enables the export of DataDiVR designated data format
+A CytoscapeApp –[DataDiVRApp](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar) – which enables the export of DataDiVR designated data format
 
 Requires an DataDiVR extension – [CyEx](https://github.com/ObT1337/CyEx) – which enables the visualization of STRING specific features like multiple association evidences
 
@@ -8,7 +8,7 @@ Requires an DataDiVR extension – [CyEx](https://github.com/ObT1337/CyEx) – w
 
 ### **Resources**
 
-## [VRNetzerApp](https://github.com/menchelab/STRING-VRNetzer/blob/main/VRNetzerApp/target/VRNetzerApp-1.0.0.jar)
+## [DataDiVRApp](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar)
 
 ## **Content**
 
@@ -23,35 +23,35 @@ Requires an DataDiVR extension – [CyEx](https://github.com/ObT1337/CyEx) – w
 
 ---
 
-  <summary><h3 id="App_install"><b>1. Installation of the VRNetzerApp</b></h3></summary>
+  <summary><h3 id="App_install"><b>1. Installation of the DataDiVRApp</b></h3></summary>
 To install it, you can use the App Manger in Cytoscape:<br>
 
-`Apps -> App Manger -> Install from File... -> select the "VRNetzerApp-x.x.x.jar" file.`
+`Apps -> App Manger -> Install from File... -> select the "DataDiVRApp-x.x.x.jar" file.`
 
 ---
 
-  <summary><h3 id="App_usage"><b> 2. Usage of the VRNetzerApp </b></h3></summary>
+  <summary><h3 id="App_usage"><b> 2. Usage of the DataDiVRApp </b></h3></summary>
 
 <h4> Export a network as VRNetz </h4>
 1. Select a network you would like to export.
 2. Export the selected network as an "VRNetz" via:<br>
-   a) Apps -> VRNetzer -> Export network as VRNetz<br>
+   a) Apps -> DataDiVR -> Export network as VRNetz<br>
    or <br>
    b) File -> Export -> Export network as VRNetz
 3. Select the location where to save the network, as well as a name in the prompted window.
 (4. When needed you can select only the link and node column you want to export. By default all link and node columns are exported.)
 1. Click "Ok" and the network is exported.
 
-![Picture that visualizes the location of the StringEx uploader tab.](pictures/VRNetzerApp_export.png)
+![Picture that visualizes the location of the StringEx uploader tab.](pictures/DataDiVRApp_export.png)
 
-You network is now exported as an VRNetz which can be used in the [VRNetzer](https://github.com/menchelab/VRNetzer) to present your network as a 3D network.
+You network is now exported as an VRNetz which can be used in the [DataDiVR](https://github.com/menchelab/DataDiVR_WebApp) to present your network as a 3D network.
 
-<h4> Send a network to the VRNetzer </h4>
+<h4> Send a network to the DataDiVR </h4>
 
 1. Select a network you would like to send.
 
-2. Send the selected network to the VRNetzer via:<br>
-   `- Apps -> VRNetzer -> Send network to VRNetzer`
+2. Send the selected network to the DataDiVR via:<br>
+   `- Apps -> DataDiVR -> Send network to DataDiVR`
    <br>
 3. Select a layout algorithm the prompted window.
    a) You can define the variables of the layout algorithm if you like.
@@ -62,11 +62,11 @@ You network is now exported as an VRNetz which can be used in the [VRNetzer](htt
 5. Select whether you want to update an existing project, or create a new one.
    a) Update an existing project: All layouts with the same name are overwritten. Pick this option if you want to update an existing project with new layouts or node colors.
    b) Create a new project: A new project is created. Pick this option if you want to create a new project, be aware that the project name has to be unique. If a project with this name already exists, the whole project will be overwritten.
-   (5. If the VRNetzer is not running on your local machine or on a different port than 5000, you can change the IP and port.)
+   (5. If the DataDiVR is not running on your local machine or on a different port than 5000, you can change the IP and port.)
    (6. When needed you can select only the link and node column you want to send. By default all link and node columns are sent.)
-6. Click "Ok" and the network is sent to the VRNetzer.
+6. Click "Ok" and the network is sent to the DataDiVR.
 
-![Picture that visualizes the location of the StringEx uploader tab.](pictures/VRNetzerApp_send.png)
+![Picture that visualizes the location of the StringEx uploader tab.](pictures/DataDiVRApp_send.png)
 
 ---
 
@@ -141,19 +141,20 @@ Do the first three steps as mentioned [above](#upload_string).
 
 ## **Dependencies**
 
-[Cytoscape - StringApp](https://apps.cytoscape.org/apps/stringapp)
+<!-- [Cytoscape - StringApp](https://apps.cytoscape.org/apps/stringapp) -->
 
-[Cytoscape - VRNetzerApp](https://github.com/menchelab/STRING-VRNetzer/blob/main/VRNetzerApp/target/VRNetzerApp-1.0.0.jar)
+<!-- [Cytoscape - VRNetzerApp](https://github.com/menchelab/STRING-VRNetzer/blob/main/VRNetzerApp/target/VRNetzerApp-1.0.0.jar) -->
 
-[VRNetzer - StringEx](https://github.com/menchelab/StringEx)
+<!-- [VRNetzer - StringEx](https://github.com/menchelab/StringEx) -->
 
+[DataDiVR extension - CyEx](https://github.com/ObT1337/CyEx)
 ---
 
 ## **Software**
 
-[VRNetzer backend](https://github.com/menchelab/VRNetzer_Backend)
+[DataDiVR WebApp](https://github.com/menchelab/DataDiVR_WebApp)
 
-[VRNetzer VR Module](MISSING LINK)
+[DataDiVR VR Module](https://ucloud.univie.ac.at/index.php/s/kUNbOhrn8Bsl50d)
 
 [Cytoscape v3.8. ++](https://cytoscape.org/)
 
