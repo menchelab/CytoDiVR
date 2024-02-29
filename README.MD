@@ -1,105 +1,113 @@
-# **VRNETZER-APP**
+# **DataDiVR-APP**
 
-A CytoscapeApp –[DataDiVRApp](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar) – which enables the export of DataDiVR designated data format
+A CytoscapeApp –[DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar) – which enables the export of DataDiVR designated data format
 
 Requires an DataDiVR extension – [CyEx](https://github.com/ObT1337/CyEx) – which enables the visualization of STRING specific features like multiple association evidences
 
 ---
 
-### **Resources**
+## **Resources**
 
-## [DataDiVRApp](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar)
+### Download the [DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar).
+### Repo of the [CyEx](https://github.com/ObT1337/CyEx) extension.
+
+---
 
 ## **Content**
 
 1. [**Installation of the DataDiVRapp**](#App_install)<br>
-2. [**Usage of the DataDiVRapp**](#App_usage)<br>
-<!-- 3. [**Installation of StringEx**](#Ex_install)<br>
-3. [**Upload a STRING network**](#upload_string)<br>
-4. [**Upload an arbitrary VRNetz**](#upload_network)<br>
-5. [**Map string network on preprocessed PPI**](#map_network)<br>
-6. [**Dependencies**](#Dependencies)<br>
-7. [**License**](#License)<br> -->
+2. [**Installation of the CyEx extension**](#Ex_install)<br>
+3. [**Usage of the DataDiVRapp**](#App_usage)<br>
+
+<!--3. [**Upload a STRING network**](#upload_string)<br>
+1. [**Upload an arbitrary VRNetz**](#upload_network)<br>
+2. [**Map string network on preprocessed PPI**](#map_network)<br>
+3. [**Dependencies**](#Dependencies)<br>
+4. [**License**](#License)<br> -->
 
 ---
 
-  <summary><h3 id="App_install"><b>1. Installation of the DataDiVRApp</b></h3></summary>
-To install it, you can use the App Manger in Cytoscape:<br>
+<h3 id="App_install"><b>1. Installation of the DataDiVRApp</b></h3>
+
+1. Download the latest release of the DataDiVR Cytoscape App here: [DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar)
+   
+2. install the Cytoscape application using the AppManager of Cytoscape. In Cytoscape navigate to:
 
 `Apps -> App Manger -> Install from File... -> select the "DataDiVRApp-x.x.x.jar" file.`
 
+3. Select the file you downloaded in step 1.
+
 ---
 
-  <summary><h3 id="App_usage"><b> 2. Usage of the DataDiVRApp </b></h3></summary>
+<summary><h3 id="Ex_install"><b> 2. Installation of the CyEx Extensions </b></h3></summary>
+
+To make use of the application it is necessary to install the `CyEx` extension.
+
+For the installation of this extension, please refer to the respective rep: [CyEx](https://github.com/ObT1337/CyEx)
+
+<h3 id="App_usage"><b> 3. Usage of the DataDiVRApp </b></h3>
 
 <h4> Export a network as VRNetz </h4>
+
 1. Select a network you would like to export.
-2. Export the selected network as an "VRNetz" via:<br>
-   a) Apps -> DataDiVR -> Export network as VRNetz<br>
-   or <br>
+2. Export the selected network as an "VRNetz" via:
+
+   a) Apps -> DataDiVR -> Export network as VRNetz
+
+   or
+
    b) File -> Export -> Export network as VRNetz
+
 3. Select the location where to save the network, as well as a name in the prompted window.
-(4. When needed you can select only the link and node column you want to export. By default all link and node columns are exported.)
-1. Click "Ok" and the network is exported.
+   
+   (3.1. When needed you can select only the link and node column you want to export.
+   By default all link and node columns are exported.)
 
-![Picture that visualizes the location of the StringEx uploader tab.](pictures/DataDiVRApp_export.png)
+4. Click "Ok" and the network is exported.
 
-You network is now exported as an VRNetz which can be used in the [DataDiVR](https://github.com/menchelab/DataDiVR_WebApp) to present your network as a 3D network.
+You network is now exported as an VRNetz which can be used in the
+[DataDiVR](https://github.com/menchelab/DataDiVR_WebApp) to present your network
+as a 3D network. When the `CyEx` extension in installed you can navigate to 
+
+- http://localhost:5000/CyEx/upload (Backend runs on Win/Linux)
+- http://localhost:3000/CyEx/upload (Backend runs on Mac)
+
+Here you have to do the following steps:
+1. Give your project a name to later identify your project.
+2. Select the `VRNetz` file you exported with the DataDiVR Cytoscape App
+3. Select a layout algorithm that should be used to create a three-dimensional layout for the representation in VR.
+
+   3.1. Give you layout a name so you can later identify the respective layout.
+
+   3.2. Change the layout variables to your desire.
+
+   3.3. You can also add additional layouts that should be calculated during the upload.
+   This allows you to test different layouts.
+
+4. Click `UPLOAD` to upload the network.
+![Picture that visualizes the location of the CyEx uploader tab.](pictures/CyEx_upload.png)
 
 <h4> Send a network to the DataDiVR </h4>
 
 1. Select a network you would like to send.
 
 2. Send the selected network to the DataDiVR via:<br>
-   `- Apps -> DataDiVR -> Send network to DataDiVR`
+   `-> Apps -> DataDiVR -> Send network to DataDiVR`
    <br>
-3. Select a layout algorithm the prompted window.
-   a) You can define the variables of the layout algorithm if you like.
-   b) You can define a name for the layout to allow multiple layouts for the same project.
 
-4. Select a project name.
+3. Define the address of you DataDiVR backend:
 
-5. Select whether you want to update an existing project, or create a new one.
-   a) Update an existing project: All layouts with the same name are overwritten. Pick this option if you want to update an existing project with new layouts or node colors.
-   b) Create a new project: A new project is created. Pick this option if you want to create a new project, be aware that the project name has to be unique. If a project with this name already exists, the whole project will be overwritten.
-   (5. If the DataDiVR is not running on your local machine or on a different port than 5000, you can change the IP and port.)
-   (6. When needed you can select only the link and node column you want to send. By default all link and node columns are sent.)
-6. Click "Ok" and the network is sent to the DataDiVR.
+   3.1. If the DataDiVR is not running on your local machine or on a different port than 5000, you can change the IP and port.
 
-![Picture that visualizes the location of the StringEx uploader tab.](pictures/DataDiVRApp_send.png)
+4. When needed you can select only the link and node column you want to send. By default all link and node columns are sent. For exclude certain node or link column, you can expand the `Data tables` and select the column and links you want to be included in your network.
+
+5. Click "Ok" the network data is send to you DataDiVR backend and a Web browser opens with the same interface described above. As the data is already send to the server you do not have to provide a VRNetz file but you still have to do step 1 and 3.
+   
+   ![Picture that visualizes the location of the StringEx uploader tab.](pictures/DataDiVRApp_send.png)
 
 ---
 
 <!--
-<summary><h3 id="Ex_install"><b> 3. Installation of StringEx </b></h3></summary>
-
-1.  Add the StringEx directory to your VRNetzer backend directory. The directory should be located at `"extensions/StringEx"`.
-2.  Before the line:
-
-```
-python -m pip install -r requirements.txt
-```
-
-add the following line to the VRNetzer backend's `build and run` script (Windows: `buildandRUN.ps`, Linux: `linux_buildandrun.sh`, Mac: `mac_buildandrun.sh`) :
-
-```
-python -m pip install -r extensions/StringEx/requirements.txt
-```
-
-If you would like to use cartoGRAPHs to create layouts also add the following line:
-
-```
-python -m pip install -r extensions/StringEx/requirements_cartoGRAPHs.txt
-```
-
-It should now look something like this:
-
-```
-python -m pip install -r extensions/StringEx/requirements.txt
-python -m pip install -r extensions/StringEx/requirements_cartoGRAPHs.txt
-python -m pip install -r requirements.txt
-```
-
 ---
 
 <summary><h3 id="upload_string"><b> 4. Upload a Network from Cytoscape</b></h3></summary>
@@ -147,10 +155,10 @@ Do the first three steps as mentioned [above](#upload_string).
 
 <!-- [VRNetzer - StringEx](https://github.com/menchelab/StringEx) -->
 
-[DataDiVR extension - CyEx](https://github.com/ObT1337/CyEx)
+[CyEx - A DataDiVR extension](https://github.com/ObT1337/CyEx)
 ---
 
-## **Software**
+## **Used software**
 
 [DataDiVR WebApp](https://github.com/menchelab/DataDiVR_WebApp)
 
@@ -164,4 +172,5 @@ Do the first three steps as mentioned [above](#upload_string).
 
 Copyright (c) 2022 Menche Lab
 
-This project is licensed under the terms of the MIT license. Check the LICENSE.md file for details.
+This project is licensed under the terms of the MIT license. Check the
+LICENSE.md file for details.
