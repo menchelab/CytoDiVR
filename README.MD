@@ -1,15 +1,28 @@
-# **DataDiVR-APP**
+# **DataDiVR App**
 
-A CytoscapeApp –[DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar) – which enables the export of DataDiVR designated data format
+The DataDiVR App is a [Cytoscape](https://cytoscape.org/) application which is
+used to bring Cytoscape networks to Virtual Reality (VR).
+The application allows to either:
 
-Requires an DataDiVR extension – [CyEx](https://github.com/ObT1337/CyEx) – which enables the visualization of STRING specific features like multiple association evidences
+1. Export any Cytoscape network in a data format which can be uploaded to the
+   DataDiVR.
+2. Send any Cytoscape network to a running DataDiVR session.
+
+Both of these functionalities require to install the [CyEx](https://github.com/ObT1337/CyEx) extension for the DataDiVR which can be found
+[here](https://github.com/ObT1337/CyEx).
+The CyEx extension also allows to send network from a running DataDiVR
+session to Cytoscape. This enables the analysis of a reduced network with the
+broad tool set provided by Cytoscape. For this functionality the Cytoscape
+application [cyREST](https://apps.cytoscape.org/apps/cyrest) has to be installed.
+However, this application is already included in every Cytoscape installation
+starting with v3.3.
 
 ---
 
 ## **Resources**
 
-### Download the [DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar).
-### Repo of the [CyEx](https://github.com/ObT1337/CyEx) extension.
+###  - Direct download of the [DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar)
+### - Repo of the [CyEx](https://github.com/ObT1337/CyEx) extension
 
 ---
 
@@ -167,6 +180,11 @@ Do the first three steps as mentioned [above](#upload_string).
 [Cytoscape v3.8. ++](https://cytoscape.org/)
 
 ---
+
+## **Future plans**
+
+This application is planned to be extended with other functionalities that increase the user experience for both Cytoscape user as well as DataDiVR user.
+
 
 ## **License**
 
