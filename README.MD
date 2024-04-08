@@ -1,12 +1,14 @@
-# **DataDiVR App**
+# **CytoDiVR App**
 
-The DataDiVR App is a [Cytoscape](https://cytoscape.org/) application which is
+The CytoDiVR App is a [Cytoscape](https://cytoscape.org/) application which is
 used to bring Cytoscape networks to Virtual Reality (VR).
 The application allows to either:
 
 1. Export any Cytoscape network in a data format which can be uploaded to the
    DataDiVR.
 2. Send any Cytoscape network to a running DataDiVR session.
+
+It is planned to provide additional features within the DataDiVR Ecosystem.
 
 Both of these functionalities require to install the [CyEx](https://github.com/ObT1337/CyEx) extension for the DataDiVR which can be found
 [here](https://github.com/ObT1337/CyEx).
@@ -21,16 +23,16 @@ starting with v3.3.
 
 ## **Resources**
 
-###  - Direct download of the [DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar)
+###  - Direct download of the [DataDiVR-App](https://github.com/menchelab/CytoDiVR/blob/main/target/CytoDiVR-1.0.1.jar)
 ### - Repo of the [CyEx](https://github.com/ObT1337/CyEx) extension
 
 ---
 
 ## **Content**
 
-1. [**Installation of the DataDiVRapp**](#App_install)<br>
+1. [**Installation of the CytoDiVR**](#App_install)<br>
 2. [**Installation of the CyEx extension**](#Ex_install)<br>
-3. [**Usage of the DataDiVRapp**](#App_usage)<br>
+3. [**Usage of the CytoDiVR**](#App_usage)<br>
 
 <!--3. [**Upload a STRING network**](#upload_string)<br>
 1. [**Upload an arbitrary VRNetz**](#upload_network)<br>
@@ -40,13 +42,13 @@ starting with v3.3.
 
 ---
 
-<h3 id="App_install"><b>1. Installation of the DataDiVRApp</b></h3>
+<h3 id="App_install"><b>1. Installation of the CytoDiVR App</b></h3>
 
-1. Download the latest release of the DataDiVR Cytoscape App here: [DataDiVR-App](https://github.com/menchelab/DataDiVRApp/blob/main/target/DataDiVRApp-1.0.1.jar)
+1. Download the latest release of the CytoDiVR Cytoscape App here: [CytoDiVR App](https://github.com/menchelab/CytoDiVR/blob/main/target/CytoDiVR-1.0.1.jar)
    
 2. install the Cytoscape application using the AppManager of Cytoscape. In Cytoscape navigate to:
 
-`Apps -> App Manger -> Install from File... -> select the "DataDiVRApp-x.x.x.jar" file.`
+`Apps -> App Manger -> Install from File... -> select the "CytoDiVR-x.x.x.jar" file.`
 
 3. Select the file you downloaded in step 1.
 
@@ -58,14 +60,14 @@ To make use of the application it is necessary to install the `CyEx` extension.
 
 For the installation of this extension, please refer to the respective rep: [CyEx](https://github.com/ObT1337/CyEx)
 
-<h3 id="App_usage"><b> 3. Usage of the DataDiVRApp </b></h3>
+<h3 id="App_usage"><b> 3. Usage of the CytoDiVR App </b></h3>
 
 <h4> Export a network as VRNetz </h4>
 
 1. Select a network you would like to export.
 2. Export the selected network as an "VRNetz" via:
 
-   a) Apps -> DataDiVR -> Export network as VRNetz
+   a) Apps -> CytoDiVR -> Export network as VRNetz
 
    or
 
@@ -87,7 +89,7 @@ as a 3D network. When the `CyEx` extension in installed you can navigate to
 
 Here you have to do the following steps:
 1. Give your project a name to later identify your project.
-2. Select the `VRNetz` file you exported with the DataDiVR Cytoscape App
+2. Select the `VRNetz` file you exported with the CytoDiVR Cytoscape App
 3. Select a layout algorithm that should be used to create a three-dimensional layout for the representation in VR.
 
    3.1. Give you layout a name so you can later identify the respective layout.
@@ -105,7 +107,7 @@ Here you have to do the following steps:
 1. Select a network you would like to send.
 
 2. Send the selected network to the DataDiVR via:<br>
-   `-> Apps -> DataDiVR -> Send network to DataDiVR`
+   `-> Apps -> CytoDiVR -> Send network to DataDiVR`
    <br>
 
 3. Define the address of you DataDiVR backend:
