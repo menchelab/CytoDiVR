@@ -56,7 +56,7 @@ starting with v3.3.
 
 <summary><h3 id="Ex_install"><b> 2. Installation of the CyEx Extensions </b></h3></summary>
 
-To make use of the application it is necessary to install the `CyEx` extension.
+To make use of the application it is necessary to install the `CyEx` extension. Please be sure to use the dev branch for both the `CyEx`extension, aswell as for the DataDiVR_WebApp.
 
 For the installation of this extension, please refer to the respective rep: [CyEx](https://github.com/ObT1337/CyEx)
 
